@@ -65,7 +65,7 @@ This document describes the end-to-end process of deploying a two-tier web appli
 1.  **Launch EC2 Instance:**
     * Navigate to the AWS EC2 console.
     * Launch a new instance using the **Ubuntu 22.04 LTS** AMI.
-    * Select the **t.medium** instance type.
+    * Select the **t3.medium** instance type.
     * Create and assign a new key pair for SSH access.
 
 <img src="diagrams/01.png">
