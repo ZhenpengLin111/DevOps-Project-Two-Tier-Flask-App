@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashant | Flask App 🚀</title>
+    <title>Zhenpeng | Flask App 🚀</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -16,8 +16,8 @@
         }
 
         body {
-            background: linear-gradient(160deg, #0C0D16, #1A1C2B);
-            color: #ffffff;
+            background: linear-gradient(160deg, #070b1a, #0f172a);
+            color: #f1f5f9;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,20 +25,21 @@
             padding: 20px;
         }
 
-        /* Flex container for profile + content */
+        /* Glass container */
         .container {
             display: flex;
             flex-direction: row;
             max-width: 1050px;
             width: 100%;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
             border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        /* Left side: profile photo */
+        /* Profile photo */
         .profile-photo {
             flex: 0 0 200px;
             margin-right: 30px;
@@ -47,99 +48,105 @@
         .profile-photo img {
             width: 100%;
             border-radius: 50%;
-            border: 3px solid #5599FF;
-            box-shadow: 0 4px 15px rgba(85, 153, 255, 0.5);
+            border: 3px solid #2dd4bf;
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.5);
         }
 
-        /* Right side: content */
+        /* Content */
         .content {
             flex: 1;
         }
 
+        /* Header */
         .header h1 {
             font-size: 2rem;
             font-weight: 600;
-            color: #5599FF;
+            color: #a78bfa;
             margin-bottom: 8px;
         }
 
         .header p {
             font-size: 1rem;
-            color: #ccc;
+            color: #cbd5f5;
             margin-bottom: 15px;
         }
 
+        /* About */
         .about {
             margin-bottom: 20px;
-            padding: 10px 15px;
-            border-radius: 12px;
+            padding: 12px 16px;
+            border-radius: 14px;
             background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #2dd4bf;
         }
 
         .about h2 {
             font-size: 1.3rem;
-            color: #5599FF;
+            color: #2dd4bf;
             margin-bottom: 8px;
         }
 
         .about p {
             font-size: 0.95rem;
-            color: #ddd;
-            line-height: 1.5;
+            color: #e5e7eb;
+            line-height: 1.6;
         }
 
+        /* Messages */
         .messages {
             margin-bottom: 15px;
             padding: 12px;
-            background: rgba(85, 153, 255, 0.08);
-            border: 1px solid rgba(85, 153, 255, 0.2);
-            border-radius: 12px;
+            background: rgba(45, 212, 191, 0.08);
+            border: 1px solid rgba(45, 212, 191, 0.25);
+            border-radius: 14px;
             max-height: 200px;
             overflow-y: auto;
-            text-align: left;
         }
 
         .messages p {
-            padding: 8px;
-            background: rgba(255, 255, 255, 0.07);
-            border-radius: 8px;
+            padding: 8px 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
             margin-bottom: 6px;
             font-size: 0.95rem;
         }
 
+        /* Input */
         input[type="text"] {
             width: 100%;
             padding: 12px;
-            border: 1px solid rgba(85, 153, 255, 0.3);
-            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(45, 212, 191, 0.35);
+            background: rgba(255, 255, 255, 0.06);
             color: #fff;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 16px;
             transition: all 0.3s ease;
             text-align: center;
         }
 
         input[type="text"]:focus {
-            border-color: #5599FF;
-            box-shadow: 0 0 12px rgba(85, 153, 255, 0.6);
+            border-color: #2dd4bf;
+            box-shadow: 0 0 14px rgba(45, 212, 191, 0.6);
             outline: none;
         }
 
+        /* Button */
         input[type="submit"] {
             width: 100%;
             padding: 12px;
-            background: #5599FF;
-            color: #ffffff;
+            background: linear-gradient(135deg, #2dd4bf, #22d3ee);
+            color: #022c22;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
         input[type="submit"]:hover {
-            background: #417ad6;
-            box-shadow: 0 0 15px rgba(85, 153, 255, 0.6);
+            background: linear-gradient(135deg, #22d3ee, #2dd4bf);
+            box-shadow: 0 0 18px rgba(45, 212, 191, 0.7);
             transform: translateY(-2px);
         }
 
@@ -153,39 +160,42 @@
             .profile-photo {
                 margin-right: 0;
                 margin-bottom: 20px;
-                flex: 0 0 auto;
             }
         }
     </style>
+
 </head>
 
 <body>
     <div class="container">
         <!-- Profile photo -->
         <div class="profile-photo">
-            <img src="1.png" alt="Prashant Photo">
+            <img src="Profile Picture.jpeg" alt="">
         </div>
 
         <!-- Content -->
         <div class="content">
             <div class="header">
-                <h1>Prashant Gohil | DevOps Enthusiast</h1>
-                <p>Student | Aspiring Cloud & DevOps Engineer</p>
+                <h1>Zhenpeng Lin | Cloud Security Enthusiast</h1>
+                <p>Student | Aspiring Cloud Security Engineer</p>
             </div>
 
             <div class="about">
                 <h2>About Me</h2>
-                <p>Hi, I'm <b>Prashant</b> 👋, a student and aspiring Cloud & DevOps engineer.</p>
+                <p>Hi, I'm <b>Zhenpeng</b> 👋, a student and aspiring Cloud Security engineer.</p>
                 <p style="margin-top:10px;">
-                    <b>Project:</b> I have deployed a 2-tier Flask application (Flask + MySQL) on AWS EC2 using Docker.  
-                    I used Docker Compose to manage both containers with volumes and a custom network.  
-                    The source code is hosted on GitHub, and Jenkins is integrated to set up a CI/CD pipeline for automated deployment.
+                    <b>Project:</b> This project is for me to learn the Cloud / DevOps foundamentals to become a Cloud
+                    Security Engineer. I have deployed a 2-tier Flask application (Flask + MySQL) on AWS EC2 using
+                    Docker.
+                    I used Docker Compose to manage both containers with volumes and a custom network.
+                    The source code is hosted on GitHub, and Jenkins is integrated to set up a CI/CD pipeline for
+                    automated deployment.
                 </p>
             </div>
 
             <div class="messages">
                 {% for message in messages %}
-                    <p>{{ message[0] }}</p>
+                <p>{{ message[0] }}</p>
                 {% endfor %}
             </div>
 
@@ -198,8 +208,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $("#messageForm").on("submit", function(event) {
+        $(document).ready(function () {
+            $("#messageForm").on("submit", function (event) {
                 event.preventDefault();
                 let messageInput = $("input[name='new_message']");
                 let message = messageInput.val().trim();
@@ -213,13 +223,13 @@
                     url: "/submit",
                     type: "POST",
                     data: { new_message: message },
-                    success: function(response) {
+                    success: function (response) {
                         if (response && response.message) {
                             $(".messages").append("<p>" + response.message + "</p>");
                             messageInput.val("");
                         }
                     },
-                    error: function(xhr, status, error) {
+                    error: function (xhr, status, error) {
                         console.error("AJAX Error:", status, error);
                     }
                 });
@@ -227,4 +237,5 @@
         });
     </script>
 </body>
+
 </html>
