@@ -309,7 +309,7 @@ pipeline {
 ---
 
 ### **8. Step 6: Automating the Pipeline**
-1. **EEnable the GitHub Trigger in Jenkins:**
+1. **Enable the GitHub Trigger in Jenkins:**
    * Jenkins Job → Configure → Build Triggers.
    * Enable GitHub hook trigger for GITScm polling.
    * Save the configuration.
