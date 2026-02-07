@@ -1,7 +1,7 @@
 # DevOps Project Report: Automated CI/CD Pipeline for a 2-Tier Flask Application on AWS
 
 **Author:** Zhenpeng Lin
-**Date:** January 12, 2025
+**Date:** January 12, 2026
 
 ---
 
